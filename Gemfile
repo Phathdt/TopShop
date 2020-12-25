@@ -5,7 +5,7 @@ ruby '2.7.2'
 
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+gem 'rails', '~> 6.1'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -14,6 +14,7 @@ gem 'rack-cors'
 gem 'jsonapi-serializer', '~> 2.1.0'
 gem 'oj', '~> 3.10', '>= 3.10.17'
 gem 'jsonapi.rb'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'

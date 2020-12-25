@@ -5,6 +5,6 @@ class BaseSerializer
   alias serialized_json to_json
 
   def to_json(*_args)
-    Oj.dump(serializable_hash)
+    serializable_hash[:data][:attributes]
   end
 end

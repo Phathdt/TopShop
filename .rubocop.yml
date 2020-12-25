@@ -21,6 +21,9 @@ Style/TrailingCommaInArguments:
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 
+Metrics/MethodLength:
+  Max: 50
+
 Lint/DuplicateBranch: # (new in 1.3)
   Enabled: true
 Lint/DuplicateRegexpCharacterClassElement: # (new in 1.1)
