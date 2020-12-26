@@ -1,6 +1,7 @@
-module TopshopCore
+module TopShopCore
   class ProductDomain
-    ProductQuery = TopshopCore::Products::ProductQuery
+    ProductQuery = TopShopCore::Products::ProductQuery
+    Paginator = TopShopCore::Helpers::Paginator
 
     class << self
       def search_products(params)
@@ -8,7 +9,7 @@ module TopshopCore
         scope = ProductQuery.search_name(scope, params[:search])
         scope = ProductQuery.filter_by_price(scope, params[:from_price], params[:to_price])
         scope = ProductQuery.sort(scope, params[:sort_type], params[:sort_direction])
-        scope = ProductQuery.paginate(scope, params[:page])
+        scope = Paginator.paginate(scope, params[:page], params[:size])
 
         scope.includes(:user)
       end

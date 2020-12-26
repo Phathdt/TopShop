@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show]
 
   def index
-    products = TopshopCore::ProductDomain.search_products(params)
+    products = TopShopCore::ProductDomain.search_products(params)
 
     render json: paging_response(products, ProductSerializer)
   end
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
   end
 
   def search_params
-    params.permit(:search, :page, :from_price, :to_price, :sort_type, :sort_direction)
+    params.permit(:search, :page, :size, :from_price, :to_price, :sort_type, :sort_direction)
   end
 
   # def product_params

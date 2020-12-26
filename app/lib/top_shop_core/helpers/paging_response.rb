@@ -1,4 +1,4 @@
-module TopshopCore
+module TopShopCore
   module Helpers
     class PagingResponse
       class << self

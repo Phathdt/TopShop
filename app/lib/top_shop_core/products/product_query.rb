@@ -1,4 +1,4 @@
-module TopshopCore
+module TopShopCore
   module Products
     class ProductQuery
       class << self
@@ -21,10 +21,6 @@ module TopshopCore
           sort_direction ||= :asc
 
           scope.order(sort_type => sort_direction)
-        end
-
-        def paginate(scope, page_number = 1)
-          scope.page(page_number)
         end
       end
     end
